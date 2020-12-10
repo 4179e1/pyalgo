@@ -7,6 +7,8 @@ def new_tree_node (value):
     }
 
 def tree_from_list (l):
+    if (len(l) == 0):
+        return None
 
 
     root = new_tree_node(l[0])
@@ -27,8 +29,22 @@ def tree_from_list (l):
 
         # left
         queue.append (node["left"])
-        # righ
+        # right
         queue.append (node["right"])
+
+
+    queue = [root]
+    while len(queue) > 0:
+        node = queue.pop(0)
+        if node["left"]["value"] == None:
+            node["left"] = None
+        else:
+            queue.append (node["left"])
+        if node["right"]["value"] == None:
+            node["right"] = None
+        else:
+            queue.append (node["right"])
+
 
     return root
 
