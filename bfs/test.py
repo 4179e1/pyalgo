@@ -21,8 +21,6 @@ def test_min_tree_depth():
 
     for c, h in zip (cases, heights):
         tree = tree_from_list(c)
-        print (c)
-        pprint(tree)
         got = min_tree_depth(tree)
 
         assert got == h

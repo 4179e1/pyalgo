@@ -16,7 +16,6 @@ def tree_from_list (l):
     parent = []
 
     for item in l:
-        print (queue)
         node = queue.pop(0)
 
         if item == None:

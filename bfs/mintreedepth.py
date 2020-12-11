@@ -20,9 +20,9 @@ def min_tree_depth(root):
 
             if node["left"] != None:
                 queue.append(node["left"])
-            if node["left"] != None:
-                queue.append(node["left"])
+            if node["right"] != None:
+                queue.append(node["right"])
 
         depth+=1
 
-    return depth
+    #return depth
